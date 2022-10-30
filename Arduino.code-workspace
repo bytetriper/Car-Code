@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+    ],
+    "settings": {
+        "arduino.path": "D:\\Arduino",
+        "arduino.logLevel": "info",
+        "explorer.confirmDelete": false,
+        "arduino.ignoreBoards": []
+    }
+}

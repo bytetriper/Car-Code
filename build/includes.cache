@@ -1,0 +1,87 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "D:\\Arduino\\hardware\\arduino\\avr\\cores\\arduino"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "D:\\Arduino\\hardware\\arduino\\avr\\variants\\standard"
+  },
+  {
+    "Sourcefile": "d:\\Arduino\\build\\sketch\\src.ino.cpp",
+    "Include": "QGPMaker_MotorShield.h",
+    "Includepath": "D:\\Arduino\\libraries\\QGPMakerMotorShield_V5.2"
+  },
+  {
+    "Sourcefile": "d:\\Arduino\\build\\sketch\\src.ino.cpp",
+    "Include": "Wire.h",
+    "Includepath": "D:\\Arduino\\hardware\\arduino\\avr\\libraries\\Wire\\src"
+  },
+  {
+    "Sourcefile": "d:\\Arduino\\build\\sketch\\src.ino.cpp",
+    "Include": "QGPMaker_IICSensorbar.h",
+    "Includepath": "D:\\Arduino\\libraries\\LineFollowerArray5s"
+  },
+  {
+    "Sourcefile": "d:\\Arduino\\build\\sketch\\src.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Arduino\\libraries\\QGPMakerMotorShield_V5.2\\Adafruit_MS_PWMServoDriver.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Arduino\\libraries\\QGPMakerMotorShield_V5.2\\PS2X_lib.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Arduino\\libraries\\QGPMakerMotorShield_V5.2\\PinChangeInterrupt.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Arduino\\libraries\\QGPMakerMotorShield_V5.2\\PinChangeInterrupt0.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Arduino\\libraries\\QGPMakerMotorShield_V5.2\\PinChangeInterrupt1.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Arduino\\libraries\\QGPMakerMotorShield_V5.2\\PinChangeInterrupt2.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Arduino\\libraries\\QGPMakerMotorShield_V5.2\\PinChangeInterrupt3.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Arduino\\libraries\\QGPMakerMotorShield_V5.2\\QGPMaker_MotorShield.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Arduino\\hardware\\arduino\\avr\\libraries\\Wire\\src\\Wire.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Arduino\\hardware\\arduino\\avr\\libraries\\Wire\\src\\utility\\twi.c",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Arduino\\libraries\\LineFollowerArray5s\\QGPMaker_IICSensorbar.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]
