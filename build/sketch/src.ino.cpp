@@ -7,11 +7,13 @@
 void abort(const char * words);
 #line 10 "d:\\Arduino\\project\\Vehicle\\main\\src\\src.ino"
 void log(const char * words);
-#line 379 "d:\\Arduino\\project\\Vehicle\\main\\src\\src.ino"
+#line 380 "d:\\Arduino\\project\\Vehicle\\main\\src\\src.ino"
 void setup();
-#line 397 "d:\\Arduino\\project\\Vehicle\\main\\src\\src.ino"
+#line 398 "d:\\Arduino\\project\\Vehicle\\main\\src\\src.ino"
 void adjust(int angel1,int angle2,int d1,int d2);
 #line 408 "d:\\Arduino\\project\\Vehicle\\main\\src\\src.ino"
+void Grab();
+#line 437 "d:\\Arduino\\project\\Vehicle\\main\\src\\src.ino"
 void loop();
 #line 4 "d:\\Arduino\\project\\Vehicle\\main\\src\\src.ino"
 void abort(const char * words)
@@ -319,16 +321,18 @@ class vehicle
     void adjust_line_Speed()
     {
         offset dir=judge_position();
-    
-        if(dir==Toleft||dir==Toright)
-            delta=170;
+        if(dir==offset::Right||dir==offset::Left)
+            delta=40;
         else
-            delta=0;
+            delta=130;
         if(dir==offset::Toright)
             log("Too Left");
         if(dir==offset::Toleft)
             log("Too Right");
-        if(dir==offset::Mean||dir==outline)
+        
+        if(dir==offset::outline)
+            dir=offset::Mean;
+        if(dir==offset::Mean)
         {
             run(Forward);
             Speed(LR,30);
@@ -341,7 +345,6 @@ class vehicle
             //Speed(LR,255);
             restart(LF);
             restart(LR);
-            
             //Speed(LF,100+delta);
             //Speed(RR,10);
             //Speed(RF,10);
@@ -395,15 +398,15 @@ void setup() {
   // put your setup code here, to run once:
     Serial.begin(9600);
     car.init();
-    //car.run(vehicle::direction::Forward);
-    //car.angle(vehicle::Servors::One,80);
-    //car.angle(vehicle::Servors::Two,50);
-    //car.angle(vehicle::Servors::Three,50);
-    //car.angle(vehicle::Servors::Four,0);
-    //car.Speed(vehicle::wheel_position::LF,20);
-    //car.Speed(vehicle::wheel_position::LR,30);
-    //car.Speed(vehicle::wheel_position::RF,45);
-    //car.Speed(vehicle::wheel_position::RR,45);
+    car.run(vehicle::direction::Forward);
+    car.angle(vehicle::Servors::One,30);
+    car.angle(vehicle::Servors::Two,50);
+    car.angle(vehicle::Servors::Three,130);
+    car.angle(vehicle::Servors::Four,0);
+    car.Speed(vehicle::wheel_position::LF,48);
+    car.Speed(vehicle::wheel_position::LR,48);
+    car.Speed(vehicle::wheel_position::RF,45);
+    car.Speed(vehicle::wheel_position::RR,45);
     //car.setrpm(50)
     
 }
@@ -417,11 +420,9 @@ void adjust(int angel1,int angle2,int d1,int d2)
         car.angle(vehicle::Servors::Three,angle2+d2*i/n);
     }
 }
-int cnt=0;
-void loop() {
-    cnt+=1;
-    
-    car.angle(vehicle::Servors::One,40);
+void Grab()
+{
+car.angle(vehicle::Servors::One,40);
     car.angle(vehicle::Servors::Two,20);
     car.angle(vehicle::Servors::Three,60);
     delay(5000);
@@ -446,14 +447,20 @@ void loop() {
     car.angle(vehicle::Servors::Three,93);
     delay(3000);
     car.angle(vehicle::Servors::Four,0);
+}
+int cnt=0;
+void loop() {
+    cnt+=1;
+
+
     //adjust(50,50,-40,40);
     //Serial.print(cnt&1);
-    //car.adjust_line_Speed();
+    car.adjust_line_Speed();
     /*delay(1000);
     car.angle(vehicle::Servors::Three,0);
     */
    //delay(1000);
    //car.angle(vehicle::Servors::Three,120);
-   delay(5000);
+   //delay(5000);
 }
 
