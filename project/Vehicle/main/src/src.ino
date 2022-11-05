@@ -404,29 +404,39 @@ void adjust(int angel1,int angle2,int d1,int d2)
         car.angle(vehicle::Servors::Three,angle2+d2*i/n);
     }
 }
+void Grab()
+{
+car.angle(vehicle::Servors::One,40);
+    car.angle(vehicle::Servors::Two,20);
+    car.angle(vehicle::Servors::Three,60);
+    delay(5000);
+    car.angle(vehicle::Servors::Two,50);
+    car.angle(vehicle::Servors::Three,140);
+    delay(1000);
+    car.angle(vehicle::Servors::One,80);
+    car.angle(vehicle::Servors::Four,0);
+    delay(5000);
+    car.angle(vehicle::Servors::One,90);
+    car.angle(vehicle::Servors::Two,10);
+    car.angle(vehicle::Servors::Three,93);
+    delay(5000);
+    car.angle(vehicle::Servors::Four,40);
+    delay(5000);
+    car.angle(vehicle::Servors::One,40);
+    car.angle(vehicle::Servors::Two,20);
+    car.angle(vehicle::Servors::Three,60);
+    delay(5000);
+    car.angle(vehicle::Servors::One,90);
+    car.angle(vehicle::Servors::Two,10);
+    car.angle(vehicle::Servors::Three,93);
+    delay(3000);
+    car.angle(vehicle::Servors::Four,0);
+}
 int cnt=0;
 void loop() {
     cnt+=1;
-    car.angle(vehicle::Servors::One,80);
-    car.angle(vehicle::Servors::Two,50);
-    car.angle(vehicle::Servors::Three,50);
-    car.angle(vehicle::Servors::Four,0);
-    delay(5000);
-    car.angle(vehicle::Servors::One,90);
-    car.angle(vehicle::Servors::Two,10);
-    car.angle(vehicle::Servors::Three,20);
-    delay(5000);
-    car.angle(vehicle::Servors::Four,30);
-    delay(5000);
-    car.angle(vehicle::Servors::One,60);
-    car.angle(vehicle::Servors::Two,10);
-    car.angle(vehicle::Servors::Three,0);
-    delay(5000);
-    car.angle(vehicle::Servors::One,90);
-    car.angle(vehicle::Servors::Two,10);
-    car.angle(vehicle::Servors::Three,20);
-    delay(3000);
-    car.angle(vehicle::Servors::Four,0);
+
+
     //adjust(50,50,-40,40);
     //Serial.print(cnt&1);
     //car.adjust_line_Speed();
